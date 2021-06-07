@@ -1,0 +1,170 @@
+<html>
+
+<head>
+  <title>My Cart</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .badge-notify {
+      background: red;
+      position: relative;
+      top: -20px;
+      right: 10px;
+    }
+
+    .my-cart-icon-affix {
+      position: fixed;
+      z-index: 999;
+    }
+  </style>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body class="container">
+  <nav>
+
+    <div>
+      <img src="./images/tiny-books-logo.png" class="logo" height="60px" alt="Mini book store">
+    </div>
+
+    <span style="float: right;" class="right">
+      <div class="collapse navbar-collapse" id="navbarToggler">
+
+      </div>
+    </span>
+    </div>
+  </nav>
+  <hr>
+
+  <div class="page-header">
+
+    <h1>Products in your cart:
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+            class="badge badge-notify my-cart-badge"></span></span>
+      </div>
+    </h1>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <img src="images/item-1.jpg" width="150px" height="150px">
+      <br>
+      Kitty - <strong>EUR 0.50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+        data-price="0.5" data-quantity="1" data-image="images/item-1.jpg">Add to Cart</button>
+      <a href="./product.html" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/item-2.jpg" width="150px" height="150px">
+      <br>
+      Giraffe - <strong>EUR 0.90</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="2" data-name="product 2" data-summary="summary 2"
+        data-price="0.9" data-quantity="1" data-image="images/item-2.jpg">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/item-3.jpg" width="150px" height="150px">
+      <br>
+      Flamingo - <strong>EUR 1.10</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="3" data-name="product 3" data-summary="summary 3"
+        data-price="1.1" data-quantity="1" data-image="images/item-3.jpg">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/item-4.jpg" width="150px" height="150px">
+      <br>
+      Professions - <strong>EUR 1.15</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="4" data-name="Professions" data-summary="summary 4"
+        data-price="1.15" data-quantity="1" data-image="images/item-4.jpg">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+  </div>
+  <hr>
+
+  <a class="cart-link-home" href="./index.html"><button class="cart-btn">Home</button></a>
+
+
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script type='text/javascript' src="js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+  <script type="text/javascript">
+    $(function () {
+
+      var goToCartIcon = function ($addTocartBtn) {
+        var $cartIcon = $(".my-cart-icon");
+        var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+        $addTocartBtn.prepend($image);
+        var position = $cartIcon.position();
+        $image.animate({
+          top: position.top,
+          left: position.left
+        }, 500, "linear", function () {
+          $image.remove();
+        });
+      }
+
+      $('.my-cart-btn').myCart({
+        currencySymbol: '€',
+        classCartIcon: 'my-cart-icon',
+        classCartBadge: 'my-cart-badge',
+        classProductQuantity: 'my-product-quantity',
+        classProductRemove: 'my-product-remove',
+        classCheckoutCart: 'my-cart-checkout',
+        affixCartIcon: true,
+        showCheckoutModal: true,
+        numberOfDecimals: 2,
+        cartItems: [
+          { id: 1, name: 'Kitty', summary: 'Item ID 1', price: 0.50, quantity: 1, image: 'images/item-1.jpg' },
+          { id: 2, name: 'Giraffe', summary: 'Item ID 2', price: 0.90, quantity: 2, image: 'images/item-2.jpg' },
+          { id: 3, name: 'Flamingo', summary: 'Item ID 3', price: 1.10, quantity: 1, image: 'images/item-3.jpg' }
+        ],
+        clickOnAddToCart: function ($addTocart) {
+          goToCartIcon($addTocart);
+        },
+        afterAddOnCart: function (products, totalPrice, totalQuantity) {
+          console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+        },
+        clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+          console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+        },
+        checkoutCart: function (products, totalPrice, totalQuantity) {
+          let checkoutString = "Total Price: " + (totalPrice - totalPrice * 0.1) + "\nTotal Quantity: " + totalQuantity;
+          checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+          $.each(products, function () {
+            checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+          });
+          alert(checkoutString)
+          console.log("checking out", products, totalPrice, totalQuantity);
+        },
+        getDiscountPrice: function (products, totalPrice, totalQuantity) {
+          console.log("calculating discount", products, totalPrice, totalQuantity);
+          return totalPrice - totalPrice * 0.1;
+        }
+      });
+
+      $("#addNewProduct").click(function (event) {
+        var currentElementNo = $(".row").children().length + 1;
+        $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong> €' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+      });
+    });
+  </script>
+  <hr>
+  <footer class="text-center lh-1 mt-4">
+    <p>Tiny Books © 2021</p>
+    <p>E-mail: tiny-books@mail.com</p>
+    <p>Phone: + 371 00 99 88 77</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Tiny Books</title>
+</head>
+
+<body>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light mb-3">
+      <div class="container-fluid">
+
+
+        <div>
+          <img src="./images/tiny-books-logo.png" class="logo" height="60px" alt="Mini book store">
+        </div>
+
+
+        <!-- Menu: Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu: Classic -->
+        <span class="right">
+          <div class="collapse navbar-collapse" id="navbarToggler">
+
+            <ul class="navbar-nav me-auto mt-1 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./categories.html">Categories</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link cart-logo" href="./cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                  </svg></a>
+              </li>
+
+            </ul>
+          </div>
+        </span>
+      </div>
+    </nav>
+    <hr>
+
+
+    <div class="container-carousel-articles">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/mini-book-1.jpg" class="d-block w-100" alt="cat on green background">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/mini-book-2.jpg" class="d-block w-100" alt="cat on blue background">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/mini-book-3.jpg" class="d-block w-100" alt="cat on grey background">
+          </div>
+
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container-home-middle">
+        <div class="row">
+          <div class="col">
+            <h5 class="recent-articles">Tiny books' CUTEgories:</h5>
+          </div>
+          <div class="row three-cards">
+            <div class="card mb-3 border1 color1" style="max-width: 470px;">
+              <div class="row g-0 card-row">
+
+                <div class="col-md-3 small-pic">
+                  <img src="./images/story-book-1.jpg" alt="sleeping cat">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a class="font-color1" href="./categories.html">Tiny story books</a>
+                    </h5>
+                    <p class="card-text text-wrap lh-1">Some of world's most inspiring and encouraging stories in our
+                      tiny story books. Books can give new wings!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 border2 color2" style="max-width: 470px;">
+              <div class="row g-0 card-row">
+                <div class="col-md-3 small-pic">
+                  <img src="./images/photo-book-2.jpg" alt="cat steps on a screen">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a class="font-color2" href="./categories.html">Tiny photo books</a>
+                    </h5>
+                    <p class="card-text text-wrap lh-1">Save your happy moments and reconnect with them through our tiny
+                      photo books! </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 border3 cards-body3 color3" style="max-width: 470px;">
+              <div class="row g-0 card-row">
+                <div class="col-md-3 small-pic">
+                  <img src="./images/notice-book-3.jpg" alt="cat looks kinda angry">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a class="font-color3" href="./categories.html">Tiny notice books</a>
+                    </h5>
+                    <p class="card-text text-wrap lh-1">For bright ideas and great new beginnings - everything great
+                      starts from tiny! </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <footer class="text-center lh-1">
+      <p>Tiny Books © 2021</p>
+      <p>E-mail: tiny-books@mail.com</p>
+      <p>Phone: + 371 00 99 88 77</p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </body>
+
+</html>

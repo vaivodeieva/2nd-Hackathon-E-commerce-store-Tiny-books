@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="articles" style="margin: 0;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light mb-3">
+    <div class="container-fluid">
+
+      <!-- Logo goes here-->
+      <div>
+        <img src="./images/tiny-books-logo.png" class="logo" height="60px" alt="Mini book store">
+      </div>
+
+
+      <!-- Hamburger menu goes here-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Classic menu goes here-->
+      <span class="right">
+        <div class="collapse navbar-collapse" id="navbarToggler">
+
+          <ul class="navbar-nav me-auto mt-1 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-logo" href="./cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+      </span>
+    </div>
+  </nav>
+  <hr>
+  <div class="container-back-home mb-4">
+    <span> <a class="link-back-home" href="./index.html">Home &gt;</a> <a class="link-back-home"
+        href="./category-1.html">Tiny notice books &gt;</a> Notice book Kitty </span>
+  </div>
+  <div class="row container-article-images">
+
+    <div class="col-md-3 text-center">
+
+      <div class="card" style="width: 23rem;">
+
+        <div class="row large-image">
+
+          <div class="col">
+            <div>
+              <a data-fancybox="gallery" href="./images/Notice book Kitty.jpg">
+                <img style="max-width: 650px;" src="./images/Notice book Kitty 350.jpg" class="container-fluid"
+                  alt="sleeping cat">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card-body">
+
+
+          <h5 class="card-title ">Kitty</h5>
+          <p class="card-text ">0.50 EUR</p>
+          <a href="#" class="btn btn-primary align-center" onclick="addToCart()" id="addedToCartItem">Add to cart</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-9 container-article-text">
+      <div class="row container-text">
+        <div class="col">
+          <span>
+            <p>
+              Mmmeeeeooww sit on the laptop lick the other cats loved it, hated it, loved it, hated it what a
+              cat-ass-trophy! or gimme attention gimme attention gimme attention gimme attention gimme attention gimme
+              attention just kidding i don't want it anymore meow bye. Kitty scratches couch bad kitty. Purr like a car
+              engine oh yes, there is my human slave woman she does best pats ever that all i like about her hiss meow
+              rub my belly hiss hunt by meowing loudly at 5am next to human slave food dispenser or poop on grasses.
+              Hack i show my fluffy belly but it's a trap! if you pet it i will tear up your hand am in trouble, roll
+              over, too cute for human to get mad i love cats i am one wake up scratch humans leg for food then purr
+              then i have a and relax and hack meow go back to sleep owner brings food and water tries to pet on head,
+              so scratch get sprayed by water because bad cat spill litter box, scratch at owner, destroy all furniture,
+              especially couch. Pretend you want to go out but then don't. I’m so hungry i’m so hungry but ew not for
+              that hiding behind the couch until lured out by a feathery toy, steal mom's crouton while she is in the
+              bathroom you are a captive audience while sitting on the toilet, pet me and human is behind a closed door,
+              emergency! abandoned! meeooowwww!!! really likes hummus. Playing with balls of wool chirp at birds for
+              curl up and sleep on the freshly laundered towels and kitty ipsum dolor sit amet, shed everywhere shed
+              everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff
+              destroy couch. </p>
+            <p> Climb into cupboard and lick the salt off rice cakes run off table persian cat jump eat fish and sleep
+              on dog bed, force dog to sleep on floor sleep on my human's head yet meow to be let in eats owners hair
+              then claws head. Kitty loves pigs and sometimes switches in french and say "miaou" just because well why
+              not eat a plant, kill a hand. Your pillow is now my pet bed catty ipsum eat the rubberband yet meow meow,
+              for grab pompom in mouth and put in water dish meow for food, then when human fills food dish, take a few
+              bites of food and continue meowing and let me in let me out let me in let me out let me in let me out who
+              broke this door anyway . Cough hairball on conveniently placed pants skid on floor, crash into wall so
+              lick butt kitty kitty but ears back wide eyed and have secret plans or scoot butt on the rug. I like frogs
+              and 0 gravity sleeping in the box but chew on cable and favor packaging over toy. Ptracy lick the plastic
+              bag. Meow check cat door for ambush 10 times before coming in so run off table persian cat jump eat fish,
+              or while happily ignoring when being called but one of these days i'm going to get that red dot, just you
+              wait and see. </p>
+            <p>
+              Steal mom's crouton while she is in the bathroom prow? ew dog you drink from the toilet, yum yum warm milk
+              hotter pls, ouch too hot. Be superior eat all the power cords love me! and cough for intrigued by the
+              shower, so groom forever, stretch tongue and leave it slightly out, blep, gimme attention gimme attention
+              gimme attention gimme attention gimme attention gimme attention just kidding i don't want it anymore meow
+              bye. Stare at imaginary bug really likes hummus but scream for no reason at 4 am and ooh, are those your
+              $250 dollar sandals?
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer class="text-center lh-1">
+    <p>Tiny Books © 2021</p>
+    <p>E-mail: tiny-books@mail.com</p>
+    <p>Phone: + 371 00 99 88 77</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
